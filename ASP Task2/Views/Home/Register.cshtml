@@ -1,0 +1,31 @@
+﻿@model ASP_Task2.Models.UserVM
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    <form asp-controller="Home" asp asp-action="Register" enctype="multipart/form-data">
+        Id : <input asp-for="@Model.User.Id" />
+        <hr />
+        Name : <input asp-for="@Model.User.Name" />
+        <hr />
+        Surname : <input asp-for="@Model.User.Surname" />
+        <hr />
+        Age : <input asp-for="@Model.User.Age" />
+        <hr />
+
+        <button type="submit" onclick="btnClick">Add</button>
+    </form>
+
+</body>
+</html>

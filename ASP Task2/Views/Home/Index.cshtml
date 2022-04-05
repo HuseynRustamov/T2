@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ASP_Task2.Entities.User>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <div style=" margin-left: 50px; border-radius: 10px; width: 20em; background-color: white; margin: 5px; text-align: center">
+            <h1>@item.Name</h1>
+            <h1>@item.Surname</h1>
+            <h1>@item.Age</h1>
+        </div>
+    }
+    <input class="button" type="button" value="Register" onclick="@("window.location.href='" + @Url.Action("Register", "Home") + "'");" />
+</body>
+</html>
